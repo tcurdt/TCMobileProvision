@@ -53,15 +53,15 @@
 {
     if ([@"1.2.840.113549.1.7.1" isEqualToString:self.currentObjectIdentifier]) {
 
-        NSString *tmp = nil;
+        NSError *err = nil;
 
         NSDictionary *dict = (NSDictionary *)[NSPropertyListSerialization
-                                 propertyListFromData:data
-                                     mutabilityOption:NSPropertyListImmutable
+                                 propertyListWithData:data
+                                              options:NSPropertyListImmutable
                                                format:NULL
-                                     errorDescription:&tmp];
+                                                error:&err];
 
-        NSAssert(tmp == nil, @"Failed to parse dictionary %@", tmp);
+        NSAssert(err == nil, @"Failed to parse dictionary %@", err);
 
         self.dict = dict;
 
