@@ -15,7 +15,7 @@
  */
 
 #import "TCMobileProvision.h"
-#import "DTASN1Parser.h"
+#import <DTFoundation/DTASN1Parser.h>
 
 @interface TCMobileProvision () <DTASN1ParserDelegate>
 
