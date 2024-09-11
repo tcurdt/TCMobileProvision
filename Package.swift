@@ -9,7 +9,7 @@ let package = Package(
             targets: ["TCMobileProvision"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/Cocoanetics/DTFoundation", .upToNextMinor(from: "1.7.18"))
+        .package(url: "https://github.com/Cocoanetics/DTFoundation", .upToNextMinor(from: "1.7.19"))
     ],
     targets: [
         .target(
